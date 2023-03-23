@@ -1,0 +1,103 @@
+h1,
+h2 {
+  font-family: Lato;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-around;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: antiquewhite;
+  margin: 2rem;
+  position: relative;
+  animation-name: myanimation;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  /* animation-direction: reverse; */
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes myanimation {
+  0% {
+    background-color: white;
+    border-radius: 0% 0% 0% 0%;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: red;
+    border-radius: 0% 50% 0% 0%;
+    left: 300px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    border-radius: 0% 50% 50% 0%;
+    left: 300px;
+    top: 300px;
+  }
+  75% {
+    background-color: yellow;
+    border-radius: 0% 50% 50% 50%;
+    left: 0px;
+    top: 300px;
+  }
+  100% {
+    background-color: green;
+    border-radius: 50% 50% 50% 50%;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.parentBox {
+  width: 200px;
+  height: 200px;
+  background-color: royalblue;
+  margin: 2rem;
+  border-radius: 5px;
+}
+
+.childBox {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  cursor: pointer;
+  animation: childBoxAnimation 4s ease-in forwards 3 alternate;
+}
+
+.childBox:hover {
+  /* cursor: pointer;
+  animation: childBoxAnimation 4s ease-in forwards 3 alternate; */
+  animation-play-state: paused;
+}
+
+@keyframes childBoxAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%) translateY(0%);
+  }
+  /* 100% {
+    transform: translateX(0%) translateX(0%);
+  } */
+}
