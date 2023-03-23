@@ -22,8 +22,8 @@ body {
   position: relative;
   animation-name: myanimation;
   animation-duration: 4s;
-  animation-iteration-count: 2;
-  /* animation-direction: reverse; */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
 }
@@ -75,7 +75,7 @@ body {
   background-color: yellow;
   border: 1px solid black;
   cursor: pointer;
-  animation: childBoxAnimation 4s ease-in forwards 3 alternate;
+  animation: childBoxAnimation 4s ease-in forwards infinite alternate;
 }
 
 .childBox:hover {
