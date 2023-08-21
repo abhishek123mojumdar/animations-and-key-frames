@@ -77,7 +77,7 @@ body {
   cursor: pointer;
   animation: childBoxAnimation 4s ease-in forwards infinite alternate;
 }
-
+/* animation : animation-name animation-duration animation-timing-funciton animation-delay animation-iteration-count animation-fill-mode */
 .childBox:hover {
   /* cursor: pointer;
   animation: childBoxAnimation 4s ease-in forwards 3 alternate; */
